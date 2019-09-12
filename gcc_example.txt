@@ -1,0 +1,1 @@
+gcc -o test_dynamiclist test_dynamiclist.c dynamiclist.c -I.

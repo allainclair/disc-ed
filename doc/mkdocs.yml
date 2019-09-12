@@ -1,0 +1,24 @@
+extra:
+  search:
+    language: 'en, pt'
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.superfences
+
+nav:
+- Introdução: index.md
+- Aula1: aula1.md
+
+plugins:
+  - search
+
+site_name: Estrutura de Dados
+site_description: Disciplina de Estrutura de Dados
+site_author: Allainclair Flausino dos Santos
+site_url: https://allainclair.github.io/disc-ed
+
+theme:
+  language: pt
+  name: material
