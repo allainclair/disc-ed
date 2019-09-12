@@ -2,6 +2,10 @@
 
 ## Professor
 
+* Site da disciplina: [http://allainclair.github.io/disc-ed](
+  http://allainclair.github.io/disc-ed)
+* Repositório da disciplina: [https://github.com/allainclair/disc-ed](
+  https://github.com/allainclair/disc-ed)
 * **Nome:** Allan (Allainclair Flausino dos Santos)
 * **Email:** afsantos2@uem.br
 * **Graduação:** Mestre em Ciência da computação
