@@ -6,4 +6,4 @@
 * Remover;
 * Pesquisar;
 * Atualizar;
-* Inserir ordenado;
+* Inserir ordenado.

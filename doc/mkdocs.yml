@@ -10,6 +10,7 @@ markdown_extensions:
 nav:
 - Introdução: index.md
 - Aula1: aula1.md
+- Aula2: aula2.md
 
 plugins:
   - search

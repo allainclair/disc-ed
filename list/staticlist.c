@@ -40,7 +40,9 @@ int slist_remove(StaticList list, int value) {
  * return <= -1: Nao encontrou "value" na lista.
 */
 int slist_search(StaticList list, int value) {
-
+    for (int i=0; i<list.size; i++)
+        if (list.values[i] == value)
+            return i;
     return -1;
 }
 
@@ -48,6 +50,6 @@ int slist_search(StaticList list, int value) {
 /* return > -1: Indice do "value" encontrado e atualizado para new_value.
  * return <= -1: Nao encontrou "value" na lista.
 */
-int slist_update(StaticList list, int value, int new_value) {
+int slist_update(StaticList *list, int value, int new_value) {
     return -1;
 }
