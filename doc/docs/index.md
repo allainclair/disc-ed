@@ -1,5 +1,9 @@
 ## Estrutura de Dados
 
+## Avisos
+
+16 e 17 de setembro sem aula (viagem).
+
 ## Professor
 
 * Site da disciplina: [http://allainclair.github.io/disc-ed](
