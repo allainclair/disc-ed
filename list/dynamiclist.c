@@ -4,21 +4,33 @@
 #include "dynamiclist.h"
 
 
+/* Increase the list->values size multiplying by 2.
+return 1: it is all ok.
+return -1: realloc could not get memory.
+*/
 static int increase_list(DynamicList *list) {
-    int new_capacity;
+    int new_allocation_size;
     int *values = list->values;
 
+    printf("Increse List!\n");
     if (list->capacity > 0) {
-        new_capacity = sizeof(list->values) * 2;
-        if (realloc(values, new_capacity) == NULL)
+        // Espaco disponivel dobrado.
+        new_allocation_size = list->capacity * 2 * sizeof(int);
+
+        list->values = (int *) realloc(values, new_allocation_size);
+        // Retorna NULL se falhar.
+        if (list->values == NULL)
             return 0;
-        list->capacity = new_capacity;
+
+        // A capacidade eh dada pela quantidade de "int"s que podemos
+        // no momento colocar.
+        list->capacity = new_allocation_size / sizeof(int);
         return 1;
     }
     if (list->capacity <= 0) {  // First allocation.
-        int *data = malloc(1 * sizeof(int));
+        int *data = (int *) malloc(1 * sizeof(int));
         list->values = data;
-        list->capacity++;
+        list->capacity = sizeof(list->values) / sizeof(int);
         return 1;
     }
 }
@@ -36,7 +48,7 @@ int dlist_create(DynamicList *list) {
 */
 int dlist_insert(DynamicList *list, int new_value) {
     // Try to get more memory.
-    if (list->size + 1 >= list->capacity)
+    if (list->size + 1 > list->capacity)
         if (!increase_list(list))
             return -1;
     list->values[list->size++] = new_value;
