@@ -30,6 +30,53 @@ void test_insert() {
     assert (slist_insert(&list, 100) == -1);
 }
 
+void test_insert_sorded() {
+    StaticList list;
+    int index;
+    int values[] = {1, 5, 10, 15, 2, 3, 11};
+    int values_sorted[] = {1, 2, 3, 5, 10, 11, 15};
+    int indices[] = {0, 1, 2, 3, 1, 2, 5};
+
+    slist_create(&list);
+
+    for (int i=0; i<MAX; i++) {
+        index = slist_insert_sorded(&list, i);
+        assert (list.values[i] == i);
+    }
+
+    /* Full list returns -1. */
+    assert (slist_insert(&list, 100) == -1);
+
+}
+
+
+void test_remove() {
+    StaticList list;
+    int
+        input_array[] = {1, 2, 0, -1, 10, 11, 3, 20, -100, 7, 200},
+        output_array[] = {1, 2, 0, -1, 11, 3, 20, -100, 7, 200},
+        size = 11,
+        index;
+
+        // Inicializando a lista.
+        //printf("Print\n");
+        slist_create(&list);
+        for (int i=0; i<size; i++)
+            index = slist_insert(&list, input_array[i]);
+
+
+        // printf("Print\n");
+        // slist_print(list);
+        index = slist_remove(&list, 10);
+        //printf("Print index %d\n", index);
+        assert(index == 4);
+
+        for (int i=0; i<size-1; i++)
+            assert(list.values[i] == output_array[i]);
+
+}
+
+
 void test_search() {
     StaticList list;
     int
@@ -43,13 +90,14 @@ void test_search() {
         index = slist_insert(&list, input_array[i]);
 
     for (int i=0; i<size; i++) {
-        index = slist_search(list, input_array[i]);
+        index = slist_search(&list, input_array[i]);
         // printf("\nindex: %d i: %d\n", index, i);
         assert(index == i);
     }
 
-    assert (slist_search(list, 100) == -1);
+    assert (slist_search(&list, 100) == -1);
 }
+
 
 void test_update() {
     StaticList list;
@@ -77,7 +125,8 @@ void test_update() {
 int main() {
     test_create();
     test_insert();
-    // test_remove();
+    test_insert_sorted(); // Fazer!!
+    test_remove();
     test_search();
     test_update();
     // slist_print(list);
