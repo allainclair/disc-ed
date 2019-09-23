@@ -4,6 +4,36 @@
 #include "staticlist.h"
 
 
+void test_slist_binsearch() {
+    StaticList list;
+    int index;
+
+    slist_create(&list);
+
+    for (int i=0; i<MAX; i++)
+        index = slist_insert(&list, i);
+
+    for (int i=0; i<MAX; i++) {
+        index = slist_binsearch(&list, i);
+        assert (index == i);
+    }
+}
+
+void test_slist_search() {
+    StaticList list;
+    int index;
+
+    slist_create(&list);
+
+    for (int i=0; i<MAX; i++)
+        index = slist_insert(&list, i);
+
+    for (int i=0; i<MAX; i++) {
+        index = slist_search(&list, i);
+        assert (index == i);
+    }
+}
+
 /* Test the slist_create comparing with a zero size field. */
 void test_create() {
     StaticList list;
@@ -30,7 +60,29 @@ void test_insert() {
     assert (slist_insert(&list, 100) == -1);
 }
 
-void test_insert_sorded() {
+
+/* Test MAX + 1 sorted insertions into the list. */
+void test_insert_sorted() {
+    StaticList list;
+    int index, j;
+
+    slist_create(&list);
+
+    for (int i = MAX-1; i >= 0; i--) {
+        index = slist_insert_sorted(&list, i);
+        // printf("Index: %d\n", index);
+        // printf("Value: %d\n", i);
+        assert (index == 0);
+        // assert (list.values[i] == i);
+    }
+    // slist_print(list);
+
+    /* Full list returns -1. */
+    assert (slist_insert(&list, 100) == -1);
+}
+
+
+void test_insert_sorted_2() {
     StaticList list;
     int index;
     int values[] = {1, 5, 10, 15, 2, 3, 11};
@@ -40,7 +92,7 @@ void test_insert_sorded() {
     slist_create(&list);
 
     for (int i=0; i<MAX; i++) {
-        index = slist_insert_sorded(&list, i);
+        index = slist_insert_sorted(&list, i);
         assert (list.values[i] == i);
     }
 
@@ -123,12 +175,15 @@ void test_update() {
 
 
 int main() {
-    test_create();
-    test_insert();
-    test_insert_sorted(); // Fazer!!
-    test_remove();
-    test_search();
-    test_update();
+    // test_create();
+    // test_insert();
+    // test_insert_sorted();
+    // test_remove();
+    // test_search();
+    // test_update();
+
+    // test_slist_binsearch();
+    test_slist_search();
     // slist_print(list);
     // printf("%d\n", ret);
 }

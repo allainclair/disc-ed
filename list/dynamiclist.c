@@ -12,7 +12,7 @@ static int increase_list(DynamicList *list) {
     int new_allocation_size;
     int *values = list->values;
 
-    printf("Increse List!\n");
+    // printf("Increse List!\n");
     if (list->capacity > 0) {
         // Espaco disponivel dobrado.
         new_allocation_size = list->capacity * 2 * sizeof(int);
@@ -69,7 +69,7 @@ void dlist_print(DynamicList list) {
 /* return > -1: Indice do "value" encontrado e removido.
  * return <= -1: Nao encontrou "value" na lista.
 */
-int dlist_remove(DynamicList list, int value) {
+int dlist_remove(DynamicList *list, int value) {
     return -1;
 }
 
@@ -77,7 +77,7 @@ int dlist_remove(DynamicList list, int value) {
 /* return > -1: Indice do "value" encontrado.
  * return <= -1: Nao encontrou "value" na lista.
 */
-int dlist_search(DynamicList list, int value) {
+int dlist_search(DynamicList *list, int value) {
     return -1;
 }
 
@@ -85,6 +85,6 @@ int dlist_search(DynamicList list, int value) {
 /* return > -1: Indice do "value" encontrado e atualizado para new_value.
  * return <= -1: Nao encontrou "value" na lista.
 */
-int dlist_update(DynamicList list, int value, int new_value) {
+int dlist_update(DynamicList *list, int value, int new_value) {
     return -1;
 }
