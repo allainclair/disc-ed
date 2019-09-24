@@ -13,7 +13,7 @@
         <meta name="description" content="Disciplina de Estrutura de Dados">
       
       
-        <link rel="canonical" href="https://allainclair.github.io/disc-ed/aula1/">
+        <link rel="canonical" href="https://allainclair.github.io/disc-ed/aula4/">
       
       
         <meta name="author" content="Allainclair Flausino dos Santos">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Aula1 - Estrutura de Dados</title>
+        <title>Aula4 - Estrutura de Dados</title>
       
     
     
@@ -81,7 +81,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#tipo-abstrado-de-dados-abstract-data-type" tabindex="1" class="md-skip">
+      <a href="#lista-estatica" tabindex="1" class="md-skip">
         Ir para o conteúdo
       </a>
     
@@ -107,7 +107,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Aula1
+                Aula4
               
             </span>
           
@@ -186,59 +186,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Aula1
-      </label>
-    
-    <a href="./" title="Aula1" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../aula1/" title="Aula1" class="md-nav__link">
       Aula1
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Índice</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tipo-abstrado-de-dados-abstract-data-type" class="md-nav__link">
-    Tipo Abstrado de Dados (Abstract Data Type)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alocacao-dinamica-x-estatica" class="md-nav__link">
-    Alocação dinâmica x estática
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listas" class="md-nav__link">
-    Listas
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -285,22 +237,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tipo-abstrado-de-dados-abstract-data-type" class="md-nav__link">
-    Tipo Abstrado de Dados (Abstract Data Type)
+  <a href="#lista-estatica" class="md-nav__link">
+    Lista estática
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#alocacao-dinamica-x-estatica" class="md-nav__link">
-    Alocação dinâmica x estática
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listas" class="md-nav__link">
-    Listas
+  <a href="#lista-dinamica" class="md-nav__link">
+    Lista dinâmica
   </a>
   
 </li>
@@ -322,37 +267,22 @@
               
                 
                 
-                  <h1>Aula1</h1>
+                  <h1>Aula4</h1>
                 
-                <h2 id="tipo-abstrado-de-dados-abstract-data-type">Tipo Abstrado de Dados (<em>Abstract Data Type</em>)</h2>
+                <h2 id="lista-estatica">Lista estática</h2>
 <ul>
-<li>Um TAD é composto por dados e operações (funções);</li>
-<li>
-<p>Capacidade de encapsular a lógica do TAD com seus dados e operações (funções);</p>
-</li>
-<li>
-<p>Podemos pensar como um modelo matemático com uma coleção de operações para esse modelo:</p>
+<li>Inserir ordenado.</li>
+</ul>
+<h2 id="lista-dinamica">Lista dinâmica</h2>
 <ul>
-<li>
-<p>Ex: o conjunto de inteiros com suas operações de união, interseção, diferença, etc;</p>
-</li>
-<li>
-<p>As operações de um TAD não precisam ter como parâmetros apenas este TAD em específico
-  pode-se ter outro TAD. O mesmo é válido para a saída de uma operação de um
-  determinado TAD.</p>
-</li>
-<li>
-<p>Ex: divisão de inteiros pode gerar um TAD para Decimal. Ex: uma
-  soma de decimal pode receber um TAD inteiro como parâmetro, gerar um decimal
-  ou até um inteiro.</p>
-</li>
+<li>Criar;</li>
+<li>Inserir;</li>
+<li>Imprimir;</li>
+<li>Remover;</li>
+<li>Pesquisar;</li>
+<li>Atualizar;</li>
+<li>Inserir ordenado.</li>
 </ul>
-</li>
-</ul>
-<h2 id="alocacao-dinamica-x-estatica">Alocação dinâmica x estática</h2>
-<h2 id="listas">Listas</h2>
-<div class="codehilite"><pre><span></span><span class="o">*</span> <span class="n">Listas</span> <span class="n">estáticas</span> <span class="p">(</span><span class="k">C</span><span class="p">)</span>
-</pre></div>
                 
                   
                 
@@ -369,41 +299,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href=".." title="Introdução" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Anterior
-                </span>
-                Introdução
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../aula2/" title="Aula2" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Próximo
-                </span>
-                Aula2
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
