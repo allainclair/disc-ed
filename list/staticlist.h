@@ -1,4 +1,4 @@
-#define MAX 100000
+#define MAX 100
 
 
 typedef struct StaticList {

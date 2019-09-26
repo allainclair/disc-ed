@@ -182,8 +182,8 @@ int main() {
     // test_search();
     // test_update();
 
-    // test_slist_binsearch();
-    test_slist_search();
+     test_slist_binsearch();
+    //test_slist_search();
     // slist_print(list);
     // printf("%d\n", ret);
 }

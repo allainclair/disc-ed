@@ -12,7 +12,7 @@ static int increase_list(DynamicList *list) {
     int new_allocation_size;
     int *values = list->values;
 
-    // printf("Increse List!\n");
+    printf("list->capacity: %d\n", list->capacity);
     if (list->capacity > 0) {
         // Espaco disponivel dobrado.
         new_allocation_size = list->capacity * 2 * sizeof(int);
