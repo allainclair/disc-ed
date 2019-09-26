@@ -12,6 +12,7 @@ nav:
 - Aula1: aula1.md
 - Aula2: aula2.md
 - Aula3: aula3.md
+- Aula4: aula4.md
 
 plugins:
   - search
