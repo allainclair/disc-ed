@@ -47,3 +47,8 @@ da lista. Registro com campos **`valor`** e **`próximo`**.
 #### Remoções
 
 ![remocoes](../images/list/remocoes.svg)
+
+
+#### Codes
+
+Alguns códigos de lista ligada: https://www.zentut.com/c-tutorial/c-linked-list/
