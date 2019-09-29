@@ -2,7 +2,18 @@
 
 ## Avisos
 
-16 e 17 de setembro sem aula (viagem).
+* Monitoria abaixo;
+
+* 16 e 17 de setembro sem aula (viagem).
+
+## Monitoria
+
+* Segunda-feira: 13:30 - 16:50h;
+
+* Quarta-feira: 18:00 - 19:40h;
+
+* Quinta-feira: 15:30 - 17:10h.
+
 
 ## Professor
 
