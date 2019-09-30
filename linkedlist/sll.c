@@ -7,7 +7,7 @@
 static Node *create(int value) {
     Node *new_node = (Node*) malloc(sizeof(Node));
 
-    if(new_node == NULL) {
+    if (new_node == NULL) {
         printf("Error creating a new node.\n");
         exit(0);
     }

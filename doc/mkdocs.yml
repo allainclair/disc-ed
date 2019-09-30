@@ -13,6 +13,7 @@ nav:
 - Aula2: aula2.md
 - Aula3: aula3.md
 - Aula4: aula4.md
+- "Exercícios: Linked List": exerc-ll.md
 
 plugins:
   - search
