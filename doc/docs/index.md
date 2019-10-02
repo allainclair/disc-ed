@@ -2,6 +2,8 @@
 
 ## Avisos
 
+* Linus TED [lista ligada](https://youtu.be/o8NPllzkFhE?t=856);
+
 * Monitoria abaixo;
 
 * 16 e 17 de setembro sem aula (viagem).
