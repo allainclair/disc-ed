@@ -23,6 +23,46 @@ Node *sllist_create() {
 }
 
 
+int eh_crescente(Node *head) {
+    if (!head)
+        return 1;
+
+    for (Node *cur=head; cur->next; cur=cur->next)
+        if (cur->value > cur->next->value)
+            return 0;
+    return 1;
+}
+
+
+/* Remove a Node with the "value"
+ * Return new head if needed;
+*/
+Node *sllist_remove(Node *head, int value) {
+    Node
+        *prev = NULL;
+
+    for(Node *cursor = head; cursor; cursor=cursor->next) {
+        if (cursor->value == value) {  // value found!.
+            // remove = cursor;
+            if (prev != NULL) {
+                prev->next = cursor->next;
+                free(cursor);
+                return head;
+            }
+            else {  // Removing first node (head).
+                printf("First node.\n");
+                prev = head;
+                head = head->next;
+                free(prev);
+                return head;
+            }
+        }
+        prev = cursor;
+    }
+    return head;
+}
+
+
 Node *sllist_insert(Node *head, int new_value) {
     Node *new_node = create(new_value);
     new_node->next = head;

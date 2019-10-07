@@ -8,6 +8,7 @@ int eh_crescente(Node *head) {
     return 1;
 }
 
+
 int min(Node *head) {
     int
         i,

@@ -49,6 +49,19 @@ se têm o mesmo conteúdo. Faça duas versões: uma iterativa e uma recursiva.
 Escreva uma função que faça uma cópia de uma lista encadeada. Faça duas versões
 da função: uma iterativa e uma recursiva.
 
+## 4.9
+
+Escreva uma função que desaloque todas as células de uma lista encadeada (ou seja, aplique a função free a todas as células).  Estamos supondo que cada célula da lista foi originalmente alocado por malloc.  Faça duas versões: uma iterativa e uma recursiva.
+
+## 5.0
+
+Escreva uma função que copie o conteúdo de um vetor para uma lista encadeada preservando a ordem dos elementos. Faça duas versões: uma iterativa e uma recursiva.
+
+## 5.1
+
+Escreva uma função para remover de uma lista encadeada todas as células que contêm y.
+
+
 ## Fonte:
 
 [https://www.ime.usp.br/~pf/algoritmos/aulas/lista.html](
