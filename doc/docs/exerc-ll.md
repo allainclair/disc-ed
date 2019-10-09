@@ -53,13 +53,17 @@ da função: uma iterativa e uma recursiva.
 
 Escreva uma função que desaloque todas as células de uma lista encadeada (ou seja, aplique a função free a todas as células).  Estamos supondo que cada célula da lista foi originalmente alocado por malloc.  Faça duas versões: uma iterativa e uma recursiva.
 
-## 5.0
+## 4.10
 
 Escreva uma função que copie o conteúdo de um vetor para uma lista encadeada preservando a ordem dos elementos. Faça duas versões: uma iterativa e uma recursiva.
 
-## 5.1
+## 4.11
 
 Escreva uma função para remover de uma lista encadeada todas as células que contêm y.
+
+## 4.12
+
+Implementar uma pilha com lista encadeada (funcoes push e pop)
 
 
 ## Fonte:

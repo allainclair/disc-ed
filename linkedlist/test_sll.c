@@ -63,6 +63,26 @@ void test_remove() {
     // assert(index == 6);
 }
 
+void test_remove_all() {
+    Node *head = NULL;
+    int index;
+    int A[] = {1, 2, 1, 3, 4, 4, 5, 6, 6, 2};
+
+    // printf("head %d\n", head);
+    for (int i=0; i<10; i++) {
+        head = sllist_insert(head, A[i]);
+        sllist_print(head);
+        printf("\n");
+    }
+
+    // Remove the value 5
+    int value = 4;
+    head = sllist_remove_all(head, value);
+    printf("Removed value list. Value %d\n", value);
+    sllist_print(head);
+    // assert(index == 6);
+}
+
 
 void test_remove_() {
     Node *head = NULL;
@@ -114,11 +134,12 @@ void test_size() {
 
 int main() {
     // test_create();
-    test_cpy();
+    // test_cpy();
     // test_insert();
     // test_eh_crescente();
     // test_remove();
     // test_remove_();
+    test_remove_all();
     // test_search();
     // test_update();
     // slist_print(list);

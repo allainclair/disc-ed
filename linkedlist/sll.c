@@ -62,6 +62,44 @@ Node *sllist_remove(Node *head, int value) {
     return head;
 }
 
+Node *sllist_remove_all(Node *head, int value) {
+    Node
+        *prev = NULL,
+        *aux = NULL;
+    int
+        i = 0,
+        flag = 0;
+
+    for(Node *cursor = head; cursor; cursor=cursor->next) {
+        printf("Cursor value %d \n", cursor->value);
+        if (cursor->value == value) {  // value found!.
+            // remove = cursor;
+            if (prev != NULL) {
+                flag = 1;
+                // aux = prev->next;
+                prev->next = cursor->next;
+                free(cursor);
+                printf("Removeu %d\n", value);
+            }
+            else {  // Removing first node (head).
+                printf("First node.\n");
+                prev = head;
+                head = head->next;
+                free(prev);
+            }
+        }
+        else
+            flag = 0;
+
+        printf("Continuou %d\n", i);
+        if (!flag)
+            prev = cursor;
+        i++;
+    }
+    return head;
+}
+
+
 
 int sllist_remove_(Node **head, int value) {
     Node
