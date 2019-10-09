@@ -31,3 +31,7 @@ int min(Node *head) {
     }
     return min_index;
 }
+
+int main() {
+
+}

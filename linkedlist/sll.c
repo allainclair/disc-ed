@@ -63,10 +63,53 @@ Node *sllist_remove(Node *head, int value) {
 }
 
 
+int sllist_remove_(Node **head, int value) {
+    Node
+        *prev = NULL;
+    int i = 0;
+
+    for(Node *cursor = *head; cursor; cursor=cursor->next) {
+        if (cursor->value == value) {  // value found!.
+            // remove = cursor;
+            if (prev != NULL) {
+                prev->next = cursor->next;
+                free(cursor);
+                return i;
+            }
+            else {  // Removing first node (head).
+                printf("First node.\n");
+                prev = *head;
+                *head = (*head)->next;
+                free(prev);
+                return i;
+            }
+        }
+        prev = cursor;
+        i++;
+    }
+    return -1;
+}
+
+
 Node *sllist_insert(Node *head, int new_value) {
     Node *new_node = create(new_value);
     new_node->next = head;
     head = new_node;
+    return head;
+}
+
+/* copia array para lista ligada */
+Node *cpy(int A[], int n) {
+    Node
+        *head = NULL,
+        *new = NULL;
+    int i;
+
+    for (i=n-1; i>-1; i--) {
+        new = create(A[i]);
+        new->next = head;
+        head = new;
+    }
     return head;
 }
 
